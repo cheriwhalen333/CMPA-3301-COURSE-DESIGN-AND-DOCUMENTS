@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Folders and File Organization</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+        .content-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 3rem;
+        }
+        h1 { color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 1rem; }
+        h2 { color: #2563eb; margin-top: 2rem; font-weight: 700; }
+        code { background: #f8fafc; padding: 0.2rem 0.4rem; border-radius: 4px; border: 1px solid #e2e8f0; font-family: monospace; }
+        .pro-tip {
+            background: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 1rem;
+            margin-top: 2rem;
+            border-radius: 0 8px 8px 0;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="content-card">
+        <h1 class="text-3xl font-extrabold mb-6">GITHUB FOLDERS AND FILE ORGANIZATION</h1>
+        
+        <p class="mb-4">
+            In GitHub, "folders" work a little differently than they do on your computer's desktop. GitHub does not allow you to create an empty folder. A folder only "exists" on GitHub if there is at least one file inside it.
+        </p>
+        
+        <p class="mb-6 font-semibold">Here is the quickest way to create a documents folder directly on the GitHub website.</p>
+
+        <h2 class="text-xl mb-3">The "New File" Shortcut</h2>
+        <p>You can create a folder and a file at the same time using this trick:</p>
+        <ol class="list-decimal ml-6 space-y-2 mt-2">
+            <li>Navigate to the main page of your repository (e.g., <code>CMPA_3301_Dashboards</code>).</li>
+            <li>Click the <strong>Add file</strong> button and select <strong>Create new file</strong>.</li>
+            <li>In the box where it asks for the <strong>File name</strong>, type the name of the folder followed by a forward slash: <code>documents/</code></li>
+            <li>The slash tells GitHub to create a folder. Now, give your first document a name immediately after the slash: <br>
+                Example: <code>documents/README.md</code> or <code>documents/instructions.html</code>
+            </li>
+            <li>Add some text to the file (like "This folder contains project documentation").</li>
+            <li>Scroll down and click <strong>Commit changes</strong>.</li>
+        </ol>
+
+        <h2 class="text-xl mb-3">Using GitHub Desktop (Easier for many files)</h2>
+        <p>If you have several documents ready to go on your computer, use the Desktop app:</p>
+        <ul class="list-disc ml-6 space-y-2 mt-2">
+            <li>Open your repository folder on your computer (Right-click the repo in GitHub Desktop and select <strong>Show in Finder/Explorer</strong>).</li>
+            <li>Create a new folder named <code>documents</code> just like you normally would on your PC or Mac.</li>
+            <li>Move your files into that folder.</li>
+            <li>Go back to <strong>GitHub Desktop</strong>. You will see the new files listed on the left.</li>
+            <li>Type a summary (e.g., "Add documents folder"), click <strong>Commit to main</strong>, and then click <strong>Push origin</strong>.</li>
+        </ul>
+
+        <h2 class="text-xl mb-3">Important: Linking to these documents</h2>
+        <p>Now that your files are in a folder, their "address" has changed. If you want to link to a file inside that folder from your <code>index.html</code>, you must include the folder name in the link:</p>
+        <div class="bg-slate-50 p-4 rounded-md my-4 border border-slate-200">
+            <p class="text-green-700 font-mono"><strong>Correct Link:</strong> &lt;a href="documents/instructions.html"&gt;View Instructions&lt;/a&gt;</p>
+            <p class="text-red-600 font-mono mt-2"><strong>Incorrect Link:</strong> &lt;a href="instructions.html"&gt;View Instructions&lt;/a&gt;</p>
+        </div>
+        <p class="text-sm italic text-slate-500">(The incorrect link will break because the file is no longer in the "root" folder).</p>
+
+        <div class="pro-tip">
+            <strong class="text-sky-800">Pro-Tip: Organizing by Module</strong>
+            <p>Since you are working through a course, many students find it helpful to create folders for each week (e.g., <code>Module_01/</code>, <code>Module_02/</code>). This keeps your main "root" folder from getting cluttered with dozens of files.</p>
+        </div>
+    </div>
+
+</body>
+</html>
